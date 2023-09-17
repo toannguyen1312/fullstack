@@ -1,0 +1,4 @@
+// cấu hình
+{
+    "presets": ["@babel/preset-env"]
+}
