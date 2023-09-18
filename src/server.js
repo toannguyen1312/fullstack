@@ -6,6 +6,9 @@ import bodyParser from "body-parser";
 import viewEngine from "./config/viewEngine"
 import initWebRoutes from "./route/web"
 
+// connect Database
+import connectDB from "./config/connectDB"
+
 //gọi hàm config dotenv sẽ giúp chạy đc dòng dưới process.env
 require('dotenv').config(); 
 
@@ -19,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 viewEngine(app);
 initWebRoutes(app);
+connectDB();
 
 
 // tạo Port nếu ko có thì nó sẽ chạy là 6969
